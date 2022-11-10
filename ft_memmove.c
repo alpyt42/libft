@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:43:22 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/09 20:19:22 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:50:29 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned int	i;
-	char		*dst1;
-	const char	*src1;
+	char			*dst1;
+	const char		*src1;
 
 	dst1 = (char *)dst;
 	src1 = (const char *)src;

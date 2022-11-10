@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:59:31 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 12:41:45 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:50:50 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	char	*str;
+	char		*str;
 	size_t		len;
 	size_t		i;
 

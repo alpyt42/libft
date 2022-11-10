@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 17:45:46 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/09 20:17:51 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:52:08 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	len = strlen(s);
 	if (s == NULL)
-		return(NULL);
+		return (NULL);
 	while (len != 0 && s[len] != c)
 		len--;
 	if (len == 0 && s[len] != c)

@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 20:50:57 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 10:34:31 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:51:32 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int		i;
 	int		j;
 
-	str = (char*)haystack;
-	find = (char*)needle;
+	str = (char *)haystack;
+	find = (char *)needle;
 	i = 0;
 	if (!find)
 		return (NULL);
