@@ -6,21 +6,11 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:14:06 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/09 16:13:46 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:34:59 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strlen(const char *s)
-{
-	int	j;
-
-	j = 0;
-	while (s[j])
-		j++;
-	return (j);
-}
 
 size_t	ft_strlcat(char * dst, const char * src, size_t dstsize)
 {

@@ -6,21 +6,21 @@ OBJECTS = $(SOURCES:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror -I .
 
-all :    $(NAME)
+all :	$(NAME)
 
 $(NAME) : $(OBJECTS)
-    $(AR) rcs $@ $^
+	$(AR) rcs $@ $^
 
 %.o : %.c $(HEADERS) Makefile
-    $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-    $(RM) $(OBJECTS)
+	$(RM) $(OBJECTS)
 
 fclean : clean 
-    $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re : fclean
-    $(MAKE) all
+	$(MAKE) all
 
 .PHONY: all clean fclean re
