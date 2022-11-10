@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:43:18 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 13:52:45 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/10 15:13:55 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
-int		ft_isacii(int c);
+int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 void	*ft_memchr(const void *s, int c, size_t n);
