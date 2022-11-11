@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 12:14:06 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 13:51:01 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/11 11:30:12 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len = ft_strlen(dst);
 	if (dstsize == 0 || dstsize <= len)
 		return (ft_strlen(src) + dstsize);
-	while (i < (dstsize - len) && src[i])
+	while (i < (dstsize - len - 1) && src[i])
 	{
 		dst[len + i] = src[i];
 		i++;

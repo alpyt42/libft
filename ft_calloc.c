@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:35:06 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 11:58:56 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/11 12:07:16 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*memcal;
 
 	memcal = malloc (size * count);
+	if (!memcal)
+		return (NULL);
 	ft_bzero(memcal, size * count);
 	if (!memcal)
 		return (NULL);
