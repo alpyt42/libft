@@ -6,13 +6,10 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:41:32 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/11 13:30:18 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/11 13:34:31 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	
-}
+char	*ft_strjoin(char const *s1, char const *s2);
