@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:13:58 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/11 17:24:23 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:26:22 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		*str++ = *s++;
 	*str = '\0';
 	return (tmp);
-}
-
-int	main(void)
-{
-	printf("%s", ft_substr("tripouille", 0, 42000));
 }
