@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:45:19 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/15 12:41:52 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/15 20:39:38 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,13 +72,15 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	char	**str;
+	int		len;
 
 	i = 0;
 	j = 0;
-	str = (char **)malloc(sizeof(char *) * (ft_nbline(s, c) + 1));
+	len = ft_nbline(s, c);
+	str = (char **)malloc(sizeof(char *) * (len + 1));
 	if (!str)
 		return (NULL);
-	while (s[i] != '\0')
+	while (j < len)
 	{
 		while (s[i] == c && s[i != '\0'])
 			i++;
@@ -93,12 +95,3 @@ char	**ft_split(char const *s, char c)
 	str[j] = NULL;
 	return (str);
 }
-
-// int main(void)
-// {
-// 	char **tab = ft_split("split", 'l');
-//     char s[] = "Bonjour";
-//     char c = 'o';
-//     char **res = ft_split(s,c);
-// 	printf("%s", tab[0]);
-// }
