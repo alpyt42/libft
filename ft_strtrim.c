@@ -6,13 +6,13 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 14:08:13 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/11 17:06:56 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/15 10:46:00 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	check(char c, const char *set)
+static int	check(char c, const char *set)
 {
 	while (*set != '\0')
 	{
@@ -23,7 +23,7 @@ int	check(char c, const char *set)
 	return (0);
 }
 
-int	starttrim(char const *s1, char const *set)
+static int	starttrim(char const *s1, char const *set)
 {
 	int	i;
 	int	len;
@@ -35,7 +35,7 @@ int	starttrim(char const *s1, char const *set)
 	return (i);
 }
 
-int	endtrim(char const *s1, char const *set)
+static int	endtrim(char const *s1, char const *set)
 {
 	int	i;
 	int	len;
