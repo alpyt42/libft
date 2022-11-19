@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:59:31 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 13:50:50 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/18 21:27:59 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strdup(const char *s1)
 	size_t		len;
 	size_t		i;
 
-	len = ft_strlen(s1);
 	i = 0;
-	str = (char *)malloc(len * sizeof(char) + 1);
+	len = ft_strlen(s1);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	while (i < len)

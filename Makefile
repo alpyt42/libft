@@ -6,7 +6,7 @@
 #    By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 15:07:12 by ale-cont          #+#    #+#              #
-#    Updated: 2022/11/15 20:10:50 by ale-cont         ###   ########.fr        #
+#    Updated: 2022/11/18 21:09:44 by ale-cont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SOURCES = ft_calloc.c ft_isdigit.c ft_memcmp.c ft_strjoin.c ft_strmapi.c ft_strt
 OBJS = $(SOURCES:.c=.o)
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-			ft_lstclear.c ft_lstiter.c
+			ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS_BON = $(BONUS:.c=.o)
 

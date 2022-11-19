@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 11:27:38 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/11 10:50:14 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/18 17:52:49 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (dstsize > 0)

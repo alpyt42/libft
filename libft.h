@@ -6,12 +6,13 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:43:18 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/15 19:13:44 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/18 21:13:17 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define SIZE_MAX (18446744073709551615UL)
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -64,4 +65,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 #endif
