@@ -6,18 +6,18 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:45:19 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/15 20:39:38 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/21 12:23:22 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_freeall(char **res, int args)
+static char	**ft_freeall(char **res, size_t args)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (i < args)
+	while (res[i] && i < args)
 	{
 		free(res[i]);
 		i++;
@@ -26,10 +26,10 @@ static char	**ft_freeall(char **res, int args)
 	return (NULL);
 }
 
-static int	ft_nbline(char const *s, char c)
+static size_t	ft_nbline(char const *s, char c)
 {
-	int	i;
-	int	len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;
@@ -45,11 +45,11 @@ static int	ft_nbline(char const *s, char c)
 	return (len);
 }
 
-static char	*ft_createline(char const *s, char c, char **res)
+static char	*ft_createline(char const *s, char c)
 {
-	int		len;
-	int		j;
-	char	*line;
+	size_t		len;
+	size_t		j;
+	char		*line;
 
 	len = 0;
 	j = 0;
@@ -57,7 +57,7 @@ static char	*ft_createline(char const *s, char c, char **res)
 		len++;
 	line = (char *)malloc(sizeof(char) * (len + 1));
 	if (!line)
-		return ((char *)ft_freeall(res, ft_nbline(s, c)));
+		return (NULL);
 	while (j < len)
 	{
 		line[j] = s[j];
@@ -69,24 +69,24 @@ static char	*ft_createline(char const *s, char c, char **res)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	char	**str;
-	int		len;
+	size_t		i;
+	size_t		j;
+	char		**str;
 
 	i = 0;
 	j = 0;
-	len = ft_nbline(s, c);
-	str = (char **)malloc(sizeof(char *) * (len + 1));
+	str = (char **)malloc(sizeof(char *) * (ft_nbline(s, c) + 1));
 	if (!str)
 		return (NULL);
-	while (j < len)
+	while (j < ft_nbline(s, c))
 	{
 		while (s[i] == c && s[i != '\0'])
 			i++;
 		if (s[i] != c && s[i != '\0'])
 		{
-			str[j] = ft_createline(&s[i], c, str);
+			str[j] = ft_createline(&s[i], c);
+			if (!str[j])
+				return ((char **)ft_freeall(str, ft_nbline(s, c)));
 			j++;
 		}
 		while (s[i] != c && s[i] != '\0')

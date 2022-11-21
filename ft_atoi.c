@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 21:18:11 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/10 13:49:49 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/21 12:01:24 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	nb;
+	size_t					i;
+	int						sign;
+	unsigned long long int	nb;
 
 	i = 0;
 	sign = 1;
@@ -31,5 +31,9 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 		nb = nb * 10 + str[i++] - 48;
+	if (nb > LLONG_MAX && sign < 0)
+		return (0);
+	if (nb > LLONG_MAX && sign > 0)
+		return (-1);
 	return (sign * nb);
 }

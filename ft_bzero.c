@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:44:50 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/08 15:04:42 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/21 12:55:55 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*str;
+	unsigned char	*str;
 
 	str = s;
 	while (n)

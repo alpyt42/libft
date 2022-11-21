@@ -6,16 +6,16 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:43:18 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/18 21:13:17 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/21 11:51:45 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define SIZE_MAX (18446744073709551615UL)
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 typedef struct s_list
 {
