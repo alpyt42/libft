@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 17:45:19 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/21 12:23:22 by ale-cont         ###   ########.fr       */
+/*   Updated: 2022/11/21 13:46:32 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static char	*ft_createline(char const *s, char c)
 	j = 0;
 	while (s[len] != c && s[len] != '\0')
 		len++;
-	line = (char *)malloc(sizeof(char) * (len + 1));
+	line = (char *)ft_calloc(sizeof(char), (len + 1));
 	if (!line)
 		return (NULL);
 	while (j < len)
@@ -63,7 +63,6 @@ static char	*ft_createline(char const *s, char c)
 		line[j] = s[j];
 		j++;
 	}
-	line[j] = '\0';
 	return (line);
 }
 
@@ -75,7 +74,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	str = (char **)malloc(sizeof(char *) * (ft_nbline(s, c) + 1));
+	if (!s)
+		return (NULL);
+	str = (char **)ft_calloc(sizeof(char *), (ft_nbline(s, c) + 1));
 	if (!str)
 		return (NULL);
 	while (j < ft_nbline(s, c))
@@ -85,13 +86,11 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && s[i != '\0'])
 		{
 			str[j] = ft_createline(&s[i], c);
-			if (!str[j])
+			if (!str[j++])
 				return ((char **)ft_freeall(str, ft_nbline(s, c)));
-			j++;
 		}
 		while (s[i] != c && s[i] != '\0')
 			i++;
 	}
-	str[j] = NULL;
 	return (str);
 }
