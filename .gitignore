@@ -1,5 +1,6 @@
-a.out
+*.out
 *.dSYM/
 main*
 bonus
-.vscode
+*.vscode
+*.o

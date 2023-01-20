@@ -6,7 +6,7 @@
 /*   By: ale-cont <ale-cont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 18:43:18 by ale-cont          #+#    #+#             */
-/*   Updated: 2022/11/21 11:51:45 by ale-cont         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:52:27 by ale-cont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stdint.h>
+# include <stdio.h>
+# include <stdarg.h>
+# include <stdio.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+# define FD_MAX 10240
 
 typedef struct s_list
 {
@@ -23,6 +34,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+char	*get_next_line(int fd);
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -46,7 +58,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *left_str, char *buf);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
@@ -66,4 +78,15 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+char	*ft_strstr(char *str, char *to_find);
+char	**ft_arrdup(char **arr);
+int		ft_arrlen(char **arr);
+void	ft_free_arr(char **arr);
+int		ft_printf(const char *format, ...);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
+int		ft_putnbr_int(long int nbr, char *base);
+int		ft_putnbr_uns(unsigned long nbr, char *base);
+int		opt_list(char c);
+int		display_opt(char c, va_list *ap);
 #endif
